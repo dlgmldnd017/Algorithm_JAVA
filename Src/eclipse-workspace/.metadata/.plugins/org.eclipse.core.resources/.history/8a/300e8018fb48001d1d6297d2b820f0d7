@@ -1,0 +1,10 @@
+package Dynamic_Programing_1;
+
+public class Polyomino {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
