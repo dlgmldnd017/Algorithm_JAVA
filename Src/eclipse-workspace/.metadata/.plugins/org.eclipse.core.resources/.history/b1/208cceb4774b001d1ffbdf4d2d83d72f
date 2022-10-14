@@ -17,7 +17,7 @@ public class NUMB3RS_1 {
 	private static int[][] A;
 	
 	// 마을 i와 연결된 마을의 수 변수
-	private static int[] deg;
+	private static double[] deg;
 	
 	// 각각 계산할 마을의 수와 T개의 정수로 확률을 계산할 마을의 번호 변수들
 	private static int T;
@@ -40,7 +40,7 @@ public class NUMB3RS_1 {
 			// y와 x가 서로 연결되었는 지 확인하는 과정
 			// 0이면 연결되지 않았고 1이면 연결되어 있다.
 			A = new int[N][N];
-			deg = new int[N];
+			deg = new double[N];
 			for(int y=0; y<N; y++) {
 				st = new StringTokenizer(sc.readLine());
 				for(int x=0; x<N; x++) {

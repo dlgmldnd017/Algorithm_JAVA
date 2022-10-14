@@ -77,7 +77,7 @@ public class NUMB3RS_1 {
 			
 			// Q[i]가 일치하므로 확률 계산
 			double ret = 1.0;
-			for(int y=0; y<path.size(); y++) {
+			for(int y=0; y+1<path.size(); y++) {
 				ret /= deg[path.get(y)];
 			}
 			return ret;
