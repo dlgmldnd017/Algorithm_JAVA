@@ -3,6 +3,7 @@ package test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -10,16 +11,19 @@ public class Main {
 	private static StringBuilder sb = new StringBuilder();
 	
 	private static int[][] cache;
-
+	
 	public static void main(String[] args) throws IOException {
 		StringTokenizer st;
 		int C = Integer.parseInt(sc.readLine());
 		
 		for(int i=0; i<C; i++) {
-			sb.append("\n");
+			cache = new int[101][101];
+			
+			//sb.append(solve()+"\n");
 		}
 		System.out.println(sb);
 	}
+	
 	private static void solve() {
 		
 	}
