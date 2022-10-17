@@ -78,10 +78,12 @@ public class NUMB3RS_2 {
 	}
 	
 	private static double solve(int here, int days, int i) {
-		// 기저 사례(1): 지난 일수가 지났다면
 		if(days==D) return (here==Q[i]?1.0:0.0);
 		
-		if(cache[here][days] > -0.5) return cache[here][days];
+		if(cache[here][days] != -1.0) {
+			System.out.println("cache hit!!");
+			return cache[here][days];
+		}
 		
 		double ret = 0.0;
 		for(int there=0; there<N; there++) {
@@ -92,7 +94,6 @@ public class NUMB3RS_2 {
 		return cache[here][days] = ret;
 	}
 	
-	// 캐시를 -1.0으로 초기화
 	private static void initCache() {
 		for(int y=0; y<N; y++) {
 			for(int x=0; x<101; x++) {
