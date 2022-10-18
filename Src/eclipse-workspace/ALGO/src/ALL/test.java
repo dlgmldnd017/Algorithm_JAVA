@@ -9,11 +9,7 @@ public class test {
 	private static BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 	private static StringBuilder sb = new StringBuilder();
 	
-	private static int N;
-	
-	private static int MOD=10*1000*1000;
 	private static int[][] cache;
-	
 	
 	public static void main(String[] args) throws IOException {
 		StringTokenizer st;
@@ -21,30 +17,13 @@ public class test {
 		
 		for(int i=0; i<C; i++) {
 			cache = new int[101][101];
-			N = Integer.parseInt(sc.readLine());
 			
-			int result=0;
-			for(int j=1; j<=N; j++) {
-				result+=solve(N, j);
-			}
-			sb.append(result%MOD+"\n");
+			//sb.append(solve()+"\n");
 		}
 		System.out.println(sb);
 	}
 	
-	private static int solve(int n, int first) {
-		if(n==first) return 1;
+	private static void solve() {
 		
-		if(cache[n][first]!=0) return cache[n][first];
-		
-		int ret=0;
-		for(int second=1; second<=n-first; second++) {
-			int add = second+first-1;
-			add *= solve(n-first, second);
-			add %= MOD;
-			ret += add;
-			ret %= MOD;
-		}
-		return cache[n][first] = ret;
 	}
 }
