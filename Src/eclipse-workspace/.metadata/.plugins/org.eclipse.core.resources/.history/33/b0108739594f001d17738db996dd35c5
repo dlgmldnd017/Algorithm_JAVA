@@ -1,16 +1,13 @@
-package Dynamic_Programing_1;
+package ALL;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class NUMB3RS_1 {
+public class test {
 	private static BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 	private static StringBuilder sb = new StringBuilder();
-	
-	private static int N, D, P, T, Q;
-	private static int[][] A;
 	
 	private static int[][] cache;
 	
@@ -21,19 +18,7 @@ public class NUMB3RS_1 {
 		for(int i=0; i<C; i++) {
 			cache = new int[101][101];
 			
-			st = new StringTokenizer(sc.readLine());
-			N = Integer.parseInt(st.nextToken());
-			D = Integer.parseInt(st.nextToken());
-			P = Integer.parseInt(st.nextToken());
-			
-			for(int y=0; y<N; y++) {
-				st = new StringTokenizer(sc.readLine());
-				for(int x=0; x<N; x++) {
-					A[y][x] = Integer.parseInt(st.nextToken());
-				}
-			}
-			
-			sb.append(solve()+"\n");
+			//sb.append(solve()+"\n");
 		}
 		System.out.println(sb);
 	}
